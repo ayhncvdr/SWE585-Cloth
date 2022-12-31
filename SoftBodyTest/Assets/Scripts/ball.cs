@@ -5,10 +5,18 @@ using UnityEngine;
 public class ball : MonoBehaviour
 {
     public Vector3 pointB;
+    public float startingxcord;
+    public float startingycord;
    
     IEnumerator Start()
     {
         var pointA = transform.position;
+        startingxcord = transform.position.x;
+        startingycord = transform.position.y;
+        pointB.x = startingxcord;
+        pointB.y = startingycord;
+        pointB.z = pointA.z + 16;
+       
         while(true)
         {
             yield return StartCoroutine(MoveObject(transform, pointA, pointB, 3.0f));
