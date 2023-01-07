@@ -25,8 +25,10 @@ public class Controller : MonoBehaviour
     void _updateSolverFrequency ()
     {
 
-        //gameObject.GetComponent<Cloth>().clothSolverFrequency = 300;
-        gameObject.GetComponent<Cloth>().stretchingStiffness = 1;
+        gameObject.GetComponent<Cloth>().clothSolverFrequency = 120;
+        gameObject.GetComponent<Cloth>().stretchingStiffness = 0.2f;
+        gameObject.GetComponent<Cloth>().stretchingStiffness = 0.2f;
+        gameObject.GetComponent<Cloth>().damping = 0;
 
 
     }
